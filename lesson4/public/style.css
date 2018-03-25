@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.news__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.news__tile {
+    max-width: 32%;
+    min-height: 290px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+form {
+    padding: 40px;
+    border: 4px solid #444;
+    max-width: 50%;
+    margin-bottom: 40px;
+}
+
+form h2 {
+    margin-bottom: 10px;
+}
+
+select {
+    margin-top: 30px;
+}

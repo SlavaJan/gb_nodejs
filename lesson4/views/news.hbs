@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smashing News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Smashing Magazine news feed</h1>
+
+    <form action="/news" method="post">
+        <h2>How many news you want to see on one page?</h2>
+        <small>Psst! There's no pagination yet so choose more</small>
+        <br>
+        <label for="qty-select">Pick a number
+            <select name="qty" id="qty-select">
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="10">10</option>
+            </select>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="news__row">
+        {{#each news}}
+        <div class="news__tile">
+            <p class="news__tile_head">
+                <a href="https://www.smashingmagazine.com{{this.link}}" target="_blank" rel="noreferrer">
+                    {{this.title}}
+                </a>
+                <p class="news__tile_author">from {{this.author}}</p>
+            </p>
+            <div class="news__tile_text">{{this.teaser}}</div>
+        </div>
+        {{/each}}
+    </div>
+
+</body>
+
+</html>
